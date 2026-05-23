@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Forex Badshah</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#000;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    .hero{
+      min-height:100vh;
+      padding:40px 18px;
+      background:radial-gradient(circle at top, rgba(255,215,0,0.15), #000 60%);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+    }
+
+    .container{
+      width:100%;
+      max-width:700px;
+    }
+
+    .badge{
+      display:inline-block;
+      background:rgba(255,215,0,0.1);
+      border:1px solid rgba(255,215,0,0.3);
+      color:#ffd700;
+      padding:10px 18px;
+      border-radius:999px;
+      font-size:14px;
+      margin-bottom:20px;
+    }
+
+    h1{
+      font-size:58px;
+      font-weight:800;
+      line-height:1;
+    }
+
+    h1 span{
+      color:#ffd700;
+    }
+
+    .logo-box{
+      margin-top:30px;
+      display:flex;
+      justify-content:center;
+    }
+
+    .logo-box img{
+      width:100%;
+      max-width:340px;
+      border-radius:25px;
+      border:1px solid rgba(255,215,0,0.25);
+      box-shadow:0 0 40px rgba(255,215,0,0.25);
+    }
+
+    .telegram-btn-box{
+      margin-top:35px;
+      display:flex;
+      justify-content:center;
+    }
+
+    .telegram-btn{
+      background:linear-gradient(135deg,#ffd700,#ffb700);
+      color:black;
+      text-decoration:none;
+      padding:20px 40px;
+      border-radius:18px;
+      font-size:22px;
+      font-weight:800;
+      width:100%;
+      max-width:360px;
+      box-shadow:0 0 35px rgba(255,215,0,0.35);
+      transition:0.3s;
+      animation:pulse 2s infinite;
+    }
+
+    .telegram-btn:hover{
+      transform:scale(1.05);
+    }
+
+    @keyframes pulse{
+      0%{
+        transform:scale(1);
+      }
+      50%{
+        transform:scale(1.03);
+      }
+      100%{
+        transform:scale(1);
+      }
+    }
+
+    .subtitle{
+      margin-top:35px;
+      font-size:18px;
+      color:#d1d1d1;
+      line-height:1.8;
+    }
+
+    .features{
+      margin-top:30px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      justify-content:center;
+    }
+
+    .feature{
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.08);
+      padding:12px 18px;
+      border-radius:14px;
+      font-size:15px;
+    }
+
+    .stats{
+      margin-top:30px;
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:18px;
+      color:#d1d1d1;
+      font-size:15px;
+    }
+
+    .section{
+      padding:80px 20px;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:42px;
+      font-weight:800;
+      margin-bottom:15px;
+    }
+
+    .section-title span{
+      color:#ffd700;
+    }
+
+    .section-subtitle{
+      text-align:center;
+      color:#cfcfcf;
+      margin-bottom:50px;
+      font-size:17px;
+    }
+
+    .cards{
+      max-width:1200px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:25px;
+      padding:30px;
+      transition:0.3s;
+      text-align:center;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+      border-color:rgba(255,215,0,0.4);
+    }
+
+    .card-icon{
+      font-size:50px;
+    }
+
+    .card h3{
+      margin-top:18px;
+      font-size:24px;
+    }
+
+    .card p{
+      margin-top:12px;
+      color:#d1d1d1;
+      line-height:1.7;
+    }
+
+    .cta{
+      max-width:1000px;
+      margin:auto;
+      background:linear-gradient(135deg, rgba(255,215,0,0.15), rgba(0,255,100,0.08));
+      border:1px solid rgba(255,215,0,0.2);
+      border-radius:35px;
+      padding:60px 25px;
+      text-align:center;
+    }
+
+    .cta h2{
+      font-size:42px;
+      font-weight:800;
+    }
+
+    .cta p{
+      margin-top:20px;
+      color:#d1d1d1;
+      font-size:18px;
+      line-height:1.8;
+    }
+
+    .footer-btn{
+      display:inline-block;
+      margin-top:35px;
+      background:#ffd700;
+      color:black;
+      text-decoration:none;
+      padding:18px 35px;
+      border-radius:18px;
+      font-size:20px;
+      font-weight:800;
+      transition:0.3s;
+    }
+
+    .footer-btn:hover{
+      transform:scale(1.05);
+      box-shadow:0 0 30px rgba(255,215,0,0.35);
+    }
+
+    footer{
+      border-top:1px solid rgba(255,255,255,0.08);
+      padding:30px 20px;
+      text-align:center;
+      color:#9f9f9f;
+      font-size:14px;
+    }
+
+    .ads-link{
+      display:inline-block;
+      margin-top:15px;
+      color:#ffd700;
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    .ads-link:hover{
+      text-decoration:underline;
+    }
+
+    @media(max-width:768px){
+
+      h1{
+        font-size:42px;
+      }
+
+      .subtitle{
+        font-size:16px;
+      }
+
+      .section-title,
+      .cta h2{
+        font-size:32px;
+      }
+
+      .telegram-btn{
+        font-size:19px;
+        padding:18px 20px;
+      }
+
+      .feature{
+        width:100%;
+      }
+
+      .stats{
+        font-size:14px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+
+    <div class="container">
+
+      <div class="badge">
+        🚀 India’s Fast Growing Trading Community
+      </div>
+
+      <h1>
+        FOREX <span>BADSHAH</span>
+      </h1>
+
+      <!-- LOGO -->
+      <div class="logo-box">
+        <img src="logo.jpg" alt="Forex Badshah">
+      </div>
+
+      <!-- TELEGRAM BUTTON -->
+      <div class="telegram-btn-box">
+        <a href="https://t.me/+oF4h4dfw3qc4YjE1" class="telegram-btn">
+          🚀 JOIN TELEGRAM NOW
+        </a>
+      </div>
+
+      <!-- SUBTITLE -->
+      <p class="subtitle">
+        Learn Smart Trading Strategies for XAUUSD, BTCUSD & Forex Market.
+        Join thousands of traders improving their market understanding daily.
+      </p>
+
+      <!-- FEATURES -->
+      <div class="features">
+
+        <div class="feature">
+          📈 Market Analysis
+        </div>
+
+        <div class="feature">
+          🔥 Entry & Exit Ideas
+        </div>
+
+        <div class="feature">
+          💎 Risk Management
+        </div>
+
+      </div>
+
+      <!-- STATS -->
+      <div class="stats">
+
+        <div>
+          ✅ 10K+ Members
+        </div>
+
+        <div>
+          ✅ Daily Updates
+        </div>
+
+        <div>
+          ✅ Beginner Friendly
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- WHY JOIN -->
+  <section class="section">
+
+    <h2 class="section-title">
+      Why Join <span>Forex Badshah?</span>
+    </h2>
+
+    <p class="section-subtitle">
+      Simple learning. Smart analysis. Professional mindset.
+    </p>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-icon">📈</div>
+
+        <h3>
+          Daily Market Analysis
+        </h3>
+
+        <p>
+          Understand market trends with simplified analysis and trading insights.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🧠</div>
+
+        <h3>
+          Risk Management
+        </h3>
+
+        <p>
+          Learn discipline, stop-loss strategies and smart capital management.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🚀</div>
+
+        <h3>
+          Community Support
+        </h3>
+
+        <p>
+          Trade with a growing community of active and passionate traders.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+
+    <div class="cta">
+
+      <h2>
+        Ready To Level Up Your Trading Journey?
+      </h2>
+
+      <p>
+        Join Forex Badshah and access market insights, trading education and a strong trading community.
+      </p>
+
+      <a href="https://t.me/+oF4h4dfw3qc4YjE1" class="footer-btn">
+        🚀 JOIN TELEGRAM NOW
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      Disclaimer: Trading involves risk. This page is for educational and community purposes only.
+    </p>
+
+    <a href="https://t.me/badshahads007" class="ads-link" target="_blank">
+      Ads Managed by BADSHAH ADs
+    </a>
+
+  </footer>
+
+</body>
+</html>
