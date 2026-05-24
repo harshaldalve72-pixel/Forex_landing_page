@@ -19,6 +19,7 @@
   <script>
     !function (f, b, e, v, n, t, s) {
       if (f.fbq) return;
+
       n = f.fbq = function () {
         n.callMethod ?
           n.callMethod.apply(n, arguments) : n.queue.push(arguments)
@@ -42,6 +43,7 @@
       'https://connect.facebook.net/en_US/fbevents.js');
 
     fbq('init', '962533283245846');
+
     fbq('track', 'PageView');
 
     function trackTelegramJoin() {
@@ -56,9 +58,16 @@
   </script>
 
   <noscript>
-    <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=962533283245846&ev=PageView&noscript=1" />
+
+    <img
+      height="1"
+      width="1"
+      style="display:none"
+      src="https://www.facebook.com/tr?id=962533283245846&ev=PageView&noscript=1"
+    />
+
   </noscript>
+
   <!-- END META PIXEL -->
 
   <style>
@@ -168,6 +177,20 @@
         transform: scale(1);
       }
 
+    }
+
+    .redirect-box {
+      margin-top: 20px;
+      color: #ffd700;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .redirect-sub {
+      margin-top: 12px;
+      color: #cfcfcf;
+      font-size: 15px;
+      line-height: 1.7;
     }
 
     .subtitle {
@@ -398,6 +421,22 @@
 
       </div>
 
+      <!-- REDIRECT MESSAGE -->
+
+      <div class="redirect-box">
+
+        Redirecting to Telegram in
+        <span id="countdown">5</span>
+        seconds...
+
+      </div>
+
+      <div class="redirect-sub">
+
+        Access FREE XAUUSD, BTCUSD & Forex market updates instantly.
+
+      </div>
+
       <!-- SUBTITLE -->
 
       <p class="subtitle">
@@ -569,6 +608,34 @@
     </a>
 
   </footer>
+
+  <!-- AUTO REDIRECT SCRIPT -->
+
+  <script>
+
+    let countdown = 5;
+
+    const countdownElement = document.getElementById("countdown");
+
+    const timer = setInterval(() => {
+
+      countdown--;
+
+      countdownElement.innerText = countdown;
+
+      if (countdown <= 0) {
+
+        clearInterval(timer);
+
+        trackTelegramJoin();
+
+        window.location.href = "https://t.me/+oF4h4dfw3qc4YjE1";
+
+      }
+
+    }, 1000);
+
+  </script>
 
 </body>
 
